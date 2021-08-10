@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<input onchange="user(this.value)" placeholder="User ID" />
+		<input onchange="slug(this.value)" placeholder="Slug ID" />
+		<p>Test User: 300530315351425024</p>
+		<p>Test Slug: tariq</p>
+		<script src="../../cdn/devlist.js"></script>
+		<script>
+			async function user(id){
+				let data = await devlist.profile(id);
+				alert(JSON.stringify(data));
+			}
+			async function slug(value){
+				let data = await devlist.slug(value);
+				alert(JSON.stringify(data));
+			}
+		</script>
+	</body>
+</html>
