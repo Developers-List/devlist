@@ -1,9 +1,9 @@
 const fetch = require('node-fetch');
 const colors = require('colors');
 
-module.exports = async function(arg, property){
+module.exports = async function(arg){
 	if(!arg) throw Error ("Devlist: profile() function first argument must be a user ID".brightYellow);
-	let url = "https://devlist.dev/api/profile/" + arg;
+	let url = "https://devlist.dev/api/profile/" + arg + "/exists";
 	let data = await fetch(url).then(res => res.json());
-	return data.message ? false : (property ? data[property] : data);
+	return data.message ? false : data;
 }
