@@ -4,9 +4,10 @@ const fetch = require('node-fetch');
 const colors = require('colors');
 const EventEmitter = require('events');
 
-module.exports = class DevList extends EventEmitter{
+module.exports = class API_Controller extends EventEmitter{
 	constructor(){ super() }
-	profile = require('../methods/profile');
-	exists = require('../methods/exists');
-	slug = require('../methods/slug');
+	profile = require('../API_Controller/profile');
+	exists = require('../API_Controller/exists');
+	slug = require('../API_Controller/slug');
+	widget = require('../API_Controller/widget');
 }

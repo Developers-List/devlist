@@ -6,12 +6,13 @@
 		<p>Test Slug: tariq</p>
 		<script src="../../cdn/devlist.js"></script>
 		<script>
+			const devlist_api = new devlist.API_Controller();
 			async function user(id){
-				let data = await devlist.profile(id);
+				let data = await devlist_api.profile(id);
 				alert(JSON.stringify(data));
 			}
 			async function slug(value){
-				let data = await devlist.slug(value);
+				let data = await devlist_api.slug(value);
 				alert(JSON.stringify(data));
 			}
 		</script>

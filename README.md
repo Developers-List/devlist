@@ -18,10 +18,7 @@ Check out our documentation [Dev List](https://docs.devlist.dev).
 
 # Usage
 
-- `profile(userID)` - Get a profile
-    - `userID`: (REQUIRED) User ID
-- `slug(Code)` - Gets the user who owns the slug
-    - `Code`: (REQUIRED) Slug Or Vanity URL
+[Read Documentation](https://docs.devlist.dev)
 
 ## Examples
 ### (Using Await)
@@ -32,9 +29,13 @@ const devlist_api = new devlist.API_Controller();
 
 async function getUserData(){
 	let user = await devlist_api.profile('300530315351425024');
-	console.log(user);
+	console.log(user); // profile object
+	let user = await devlist_api.exists('300530315351425024');
+	console.log(user); // true
 	let slug = await devlist_api.slug('tariq');
-	console.log(slug);
+	console.log(slug); // 300530315351425024
+	let widget = await devlist_api.widget('300530315351425024');
+	console.log(widget); // widget object
 }
 getUserData(); // calling the function
 ```
@@ -49,8 +50,16 @@ devlist_api.profile('300530315351425024').then(user => {
 	console.log(user);
 })
 
+devlist_api.exists('300530315351425024').then(exists => {
+	console.log(exists);
+})
+
 devlist_api.slug('tariq').then(slug => {
 	console.log(slug);
+})
+
+devlist_api.widget('300530315351425024').then(widget => {
+	console.log(widget);
 })
 ```
 
@@ -68,11 +77,28 @@ devlist_api.profile('300530315351425024').then(user => {
 	}
 })
 
+devlist_api.exists('300530315351425024').then(exists => {
+	if(exists){
+		console.log("Profile exists");
+	}else{
+		console.log("Profile does not exists");
+	}
+})
+
 devlist_api.slug('tariq').then(slug => {
 	if(slug){
 		console.log("slug is taken by: " + slug);
 	}else{
 		console.log("slug is available")
+	}
+})
+
+devlist_api.widget('300530315351425024').then(widget => {
+	if(widget){
+		console.log(widget);
+		// {"buffer":BUFFER,"link":"https://devlist.dev/api/profile/300530315351425024/widget.png"}
+	}else{
+		console.log("Profile was not found");
 	}
 })
 ```
