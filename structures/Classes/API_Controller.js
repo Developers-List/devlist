@@ -1,13 +1,16 @@
 "use strict";
 
-const fetch = require('node-fetch');
-const colors = require('colors');
-const EventEmitter = require('events');
-
-module.exports = class API_Controller extends EventEmitter{
-	constructor(){ super() }
-	profile = require('../API_Controller/profile');
-	exists = require('../API_Controller/exists');
-	slug = require('../API_Controller/slug');
-	widget = require('../API_Controller/widget');
+module.exports = class API_Controller {
+	async profile(id, property) {
+		return require('../API_Controller/profile')(id, property || undefined)
+	}
+	async exists(id) {
+		return require('../API_Controller/exists')(id)
+	}
+	async slug(slug) {
+		return require('../API_Controller/slug')(slug)
+	}
+	async widget(id) {
+		return require('../API_Controller/widget')(id)
+	}
 }
