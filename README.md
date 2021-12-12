@@ -1,8 +1,8 @@
 # Dev List
 
 <center>
-	<a href="https://nodei.co/npm/dlist/">
-		<img alt="Dev List NPM Package Statistics" src="https://nodei.co/npm/dlist.png">
+	<a href="https://nodei.co/npm/devlist/">
+		<img alt="Dev List NPM Package Statistics" src="https://nodei.co/npm/devlist.png">
 	</a>
 </center>
 
@@ -12,9 +12,9 @@
 
 Check out our documentation [Dev List](https://docs.dlist.dev).
 
-# Installation from [NPM](https://www.npmjs.com/package/dlist)
+# Installation from [NPM](https://www.npmjs.com/package/devlist)
 
-`npm i dlist`
+`npm i devlist`
 
 # Usage
 
