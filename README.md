@@ -24,7 +24,7 @@ Check out our documentation [Dev List](https://docs.dlist.dev).
 ### (Using Await)
 
 ```js
-const dlist = require('dlist');
+const dlist = require('devlist');
 const dlist_api = new dlist.API_Controller();
 
 async function getUserData(){
@@ -43,7 +43,7 @@ getUserData(); // calling the function
 ### (Using .then function)
 
 ```js
-const dlist = require('dlist');
+const dlist = require('devlist');
 const dlist_api = new dlist.API_Controller();
 
 dlist_api.profile('300530315351425024').then(user => {
@@ -66,7 +66,7 @@ dlist_api.widget('300530315351425024').then(widget => {
 ### (Validation)
 
 ```js
-const dlist = require('dlist');
+const dlist = require('devlist');
 const dlist_api = new dlist.API_Controller();
 
 dlist_api.profile('300530315351425024').then(user => {
