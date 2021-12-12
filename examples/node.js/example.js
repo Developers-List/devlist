@@ -1,9 +1,9 @@
-const devlist = require('../../index.js');
-const devlist_api = new devlist.API_Controller();
+const dlist = require('../../index.js');
+const dlist_api = new dlist.API_Controller();
 
 async function run(){
 	// get a profile
-	let profile = await devlist_api.profile("300530315351425024");
+	let profile = await dlist_api.profile("300530315351425024");
 	if(profile){
 		console.log(profile);
 	}else{
@@ -11,11 +11,11 @@ async function run(){
 	}
 	
 	// check if profile exists
-	let exists = await devlist_api.exists("300530315351425024");
+	let exists = await dlist_api.exists("300530315351425024");
 	console.log(exists); // boolean true
 	
 	// get slug user
-	let slug = await devlist_api.slug("tariq");
+	let slug = await dlist_api.slug("tariq");
 	if(slug){
 		console.log("Slug is taken by: " + slug);
 	}else{
@@ -23,7 +23,7 @@ async function run(){
 	}
 	
 	// get profile widget
-	let widget = await devlist_api.widget("300530315351425024");
+	let widget = await dlist_api.widget("300530315351425024");
 	if(widget){
 		console.log(widget);
 	}else{

@@ -1,5 +1,5 @@
 {
-  "name": "devlist",
+  "name": "dlist",
   "version": "1.2.2",
   "description": "Official Dev List library for interacting with the Dev List API",
   "main": "index.js",
@@ -8,7 +8,9 @@
   },
   "keywords": [
     "devlist-api",
+    "dlist-api",
     "devlist",
+    "dlist",
     "developers list",
     "developer profile",
     "developers profile",
@@ -20,7 +22,7 @@
   "author": "TARIQ",
   "license": "MIT",
   "homepage": "https://docs.dlist.dev",
-  "repository": "https://github.com/1TGDev/devlist",
+  "repository": "https://github.com/1TGDev/dlist",
   "dependencies": {
     "colors": "^1.4.0",
     "node-fetch": "^2.6.1"

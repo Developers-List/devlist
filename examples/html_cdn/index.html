@@ -4,15 +4,15 @@
 		<input onchange="slug(this.value)" placeholder="Slug ID" />
 		<p>Test User: 300530315351425024</p>
 		<p>Test Slug: tariq</p>
-		<script src="../../dist/devlist.js"></script>
+		<script src="../../dist/dlist.js"></script>
 		<script>
-			const devlist_api = new devlist.API_Controller();
+			const dlist_api = new dlist.API_Controller();
 			async function user(id){
-				let data = await devlist_api.profile(id);
+				let data = await dlist_api.profile(id);
 				alert(JSON.stringify(data));
 			}
 			async function slug(value){
-				let data = await devlist_api.slug(value);
+				let data = await dlist_api.slug(value);
 				alert(JSON.stringify(data));
 			}
 		</script>

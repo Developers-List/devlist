@@ -1,8 +1,8 @@
 # Dev List
 
 <center>
-	<a href="https://nodei.co/npm/devlist/">
-		<img alt="Dev List NPM Package Statistics" src="https://nodei.co/npm/devlist.png">
+	<a href="https://nodei.co/npm/dlist/">
+		<img alt="Dev List NPM Package Statistics" src="https://nodei.co/npm/dlist.png">
 	</a>
 </center>
 
@@ -12,9 +12,9 @@
 
 Check out our documentation [Dev List](https://docs.dlist.dev).
 
-# Installation from [NPM](https://www.npmjs.com/package/devlist)
+# Installation from [NPM](https://www.npmjs.com/package/dlist)
 
-`npm i devlist`
+`npm i dlist`
 
 # Usage
 
@@ -24,17 +24,17 @@ Check out our documentation [Dev List](https://docs.dlist.dev).
 ### (Using Await)
 
 ```js
-const devlist = require('devlist');
-const devlist_api = new devlist.API_Controller();
+const dlist = require('dlist');
+const dlist_api = new dlist.API_Controller();
 
 async function getUserData(){
-	let user = await devlist_api.profile('300530315351425024');
+	let user = await dlist_api.profile('300530315351425024');
 	console.log(user); // profile object
-	let user = await devlist_api.exists('300530315351425024');
+	let user = await dlist_api.exists('300530315351425024');
 	console.log(user); // true
-	let slug = await devlist_api.slug('tariq');
+	let slug = await dlist_api.slug('tariq');
 	console.log(slug); // 300530315351425024
-	let widget = await devlist_api.widget('300530315351425024');
+	let widget = await dlist_api.widget('300530315351425024');
 	console.log(widget); // widget object
 }
 getUserData(); // calling the function
@@ -43,22 +43,22 @@ getUserData(); // calling the function
 ### (Using .then function)
 
 ```js
-const devlist = require('devlist');
-const devlist_api = new devlist.API_Controller();
+const dlist = require('dlist');
+const dlist_api = new dlist.API_Controller();
 
-devlist_api.profile('300530315351425024').then(user => {
+dlist_api.profile('300530315351425024').then(user => {
 	console.log(user);
 })
 
-devlist_api.exists('300530315351425024').then(exists => {
+dlist_api.exists('300530315351425024').then(exists => {
 	console.log(exists);
 })
 
-devlist_api.slug('tariq').then(slug => {
+dlist_api.slug('tariq').then(slug => {
 	console.log(slug);
 })
 
-devlist_api.widget('300530315351425024').then(widget => {
+dlist_api.widget('300530315351425024').then(widget => {
 	console.log(widget);
 })
 ```
@@ -66,10 +66,10 @@ devlist_api.widget('300530315351425024').then(widget => {
 ### (Validation)
 
 ```js
-const devlist = require('devlist');
-const devlist_api = new devlist.API_Controller();
+const dlist = require('dlist');
+const dlist_api = new dlist.API_Controller();
 
-devlist_api.profile('300530315351425024').then(user => {
+dlist_api.profile('300530315351425024').then(user => {
 	if(user){
 		console.log(user); // user found
 	}else{
@@ -77,7 +77,7 @@ devlist_api.profile('300530315351425024').then(user => {
 	}
 })
 
-devlist_api.exists('300530315351425024').then(exists => {
+dlist_api.exists('300530315351425024').then(exists => {
 	if(exists){
 		console.log("Profile exists");
 	}else{
@@ -85,7 +85,7 @@ devlist_api.exists('300530315351425024').then(exists => {
 	}
 })
 
-devlist_api.slug('tariq').then(slug => {
+dlist_api.slug('tariq').then(slug => {
 	if(slug){
 		console.log("slug is taken by: " + slug);
 	}else{
@@ -93,7 +93,7 @@ devlist_api.slug('tariq').then(slug => {
 	}
 })
 
-devlist_api.widget('300530315351425024').then(widget => {
+dlist_api.widget('300530315351425024').then(widget => {
 	if(widget){
 		console.log(widget);
 		// {"buffer":BUFFER,"link":"https://dlist.dev/api/profile/300530315351425024/widget.png"}

@@ -29,6 +29,6 @@ class API_Controller {
 	}
 }
 
-const devlist = {
+const dlist = {
 	API_Controller
 }
