@@ -1,8 +1,7 @@
 "use strict";
 
-const fetch = require('node-fetch');
-const colors = require('colors');
 const EventEmitter = require('events');
+require('colors');
 
 module.exports = class API_Controller extends EventEmitter{
 	constructor(){ super() }

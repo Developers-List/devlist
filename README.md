@@ -10,7 +10,7 @@
 * Useful for websites & bots where users can input any profile id/slug
 * Supports the Promise-API, you will be able to use .then, .catch, etc...
 
-Check out our documentation [Dev List](https://docs.devlist.dev).
+Check out our documentation [Dev List](https://docs.dlist.dev).
 
 # Installation from [NPM](https://www.npmjs.com/package/devlist)
 
@@ -18,7 +18,7 @@ Check out our documentation [Dev List](https://docs.devlist.dev).
 
 # Usage
 
-[Read Documentation](https://docs.devlist.dev)
+[Read Documentation](https://docs.dlist.dev)
 
 ## Examples
 ### (Using Await)
@@ -96,7 +96,7 @@ devlist_api.slug('tariq').then(slug => {
 devlist_api.widget('300530315351425024').then(widget => {
 	if(widget){
 		console.log(widget);
-		// {"buffer":BUFFER,"link":"https://devlist.dev/api/profile/300530315351425024/widget.png"}
+		// {"buffer":BUFFER,"link":"https://dlist.dev/api/profile/300530315351425024/widget.png"}
 	}else{
 		console.log("Profile was not found");
 	}
