@@ -105,4 +105,4 @@ dlist_api.widget('300530315351425024').then(widget => {
 
 ## Contributing
 
-© Dev List, 2021 | TARIQ (contact@itariq.dev)
+© Dev List, 2021 - 2022 | TARIQ (contact@itariq.dev)
